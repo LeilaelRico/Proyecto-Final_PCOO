@@ -28,29 +28,50 @@ El código está programado para ejecutarse en la consola, está hecho de manera
 Caso 1:
 
 Seleccionar 1 y escribir Leilael.
+
 Seleccionar 2 y escribir Medina.
+
 Seleccionar 3, seleccionar 2 y posteriormente 2.
+
 Seleccionar 4, elegir 1.
+
 Seleccionar 5.
+
 Seleccionar 6 mostrará:
+
 Nombre: Leilael
+
 Apellido: Medina
+
 Paquete: 2
+
 Tipo de Pago: 1
+
 Su numero: *Número aleatorio*
+
 
 Caso 2:
 
 Seleccionar 1 y escribir Omhariany.
+
 Seleccionar 2 y escribir Reyes.
+
 Seleccionar 3, seleccionar 1 y posteriormente 3.
+
 Seleccionar 4, elegir 1.
+
 Seleccionar 5.
+
 Seleccionar 6 mostrará:
+
 Nombre: Omhariany
+
 Apellido: Reyes
+
 Paquete: 3
+
 Tipo de Pago: 1
+
 Su numero: *Número aleatorio*
 
 Caso 3:
@@ -60,7 +81,9 @@ Pulsar 9 hará que el proceso termine y el programa se cierre.
 Caso 4:
 
 Seleccionar 1 y escribir Mariana.
+
 Seleccionar 2 y escribir Guzman.
+
 Seleccionar 3 y posteriormente ingresar 7 hará que el programa regrese al menú principal mostrando un mensaje que lo invita a intentarlo de nuevo.
 
 Seleccionar 3, seleccionar 1 y posteriormente 3.
@@ -69,10 +92,17 @@ Seleccionar 4 e ingresar 8 hará que el programa regrese al menú principal most
 
 Seleccionar 4, elegir 1.
 
+
 Seleccionar 5.
+
 Seleccionar 6 mostrará:
+
 Nombre: Mariana
+
 Apellido: Guzman
+
 Paquete: 3
+
 Tipo de Pago: 1
+
 Su numero: *Número aleatorio*
