@@ -1,13 +1,13 @@
 /*
-ITESM Querétaro
-Programación Orientada a Objetos
+ITESM QuerÃ©taro
+ProgramaciÃ³n Orientada a Objetos
 Proyecto Final PCOO
 Cristian Leilael Rico Espinosa A01707023
 04/12/2020
 */
 
-#include<cstdlib> // Librería para utilizar la función rand y generar números aleatorios.
-#include "creUsuario.h" // Incluyo solamente la clase de Usuario por el tipo de relación que ya existe entre las otras clases.
+#include<cstdlib> // LibrerÃ­a para utilizar la funciÃ³n rand y generar nÃºmeros aleatorios.
+#include "creUsuario.h" // Incluyo solamente la clase de Usuario por el tipo de relaciÃ³n que ya existe entre las otras clases.
 
 
 void menu(){
@@ -25,7 +25,7 @@ void menu(){
     cout<< "*******************************************************";
 }
 
-void fmpg (){ // Se crea otro pequeño menú que se utilizará dentro de una de las opciones.
+void fmpg (){ // Se crea otro pequeÃ±o menÃº que se utilizarÃ¡ dentro de una de las opciones.
     cout<< "1. Debito.\n";
     cout<< "2. Tarjeta de credito.\n";
 }
@@ -41,14 +41,14 @@ int main (){
     Usuario user; // Se crea una variable llamada user del tipo de la clase "Usuario".
 
     string usernom;
-    string userap; // Se crean variables que recibirán datos del usuario. Estas después serán utilizadas en las funciones de los setters correspondientes.
+    string userap; // Se crean variables que recibirÃ¡n datos del usuario. Estas despuÃ©s serÃ¡n utilizadas en las funciones de los setters correspondientes.
     int userpro, userpaq, userpag, usernum;
 
 
-    int opcion=0; // Esta variable será utilizada para elegir una opción del menú principal.
-    int opcionpro=0; // Variable utilizada posteriormente para un menú.
+    int opcion=0; // Esta variable serÃ¡ utilizada para elegir una opciÃ³n del menÃº principal.
+    int opcionpro=0; // Variable utilizada posteriormente para un menÃº.
 
-    while(opcion < 7 && opcion > -1){ // Se hace uso de una función while para que el menú y las opciones se ciclen hasta que el usuario desee salir.
+    while(opcion < 7 && opcion > -1){ // Se hace uso de una funciÃ³n while para que el menÃº y las opciones se ciclen hasta que el usuario desee salir.
 
         menu();
 
@@ -87,22 +87,22 @@ int main (){
               user.agregaPaqueteM("Movistar","100","15 dias"," 1.5 Gb",2);
 
               mnpro();
-              cout<<"Elija un proveedor: "; // Para mostrar los paquetes de alguno e los proveedores, se utiliza un menú que ayudará a separar a los mismos por proveedores.
+              cout<<"Elija un proveedor: "; // Para mostrar los paquetes de alguno e los proveedores, se utiliza un menÃº que ayudarÃ¡ a separar a los mismos por proveedores.
               cin>> opcionpro;
               if(opcionpro>2){
-                 cout<<"Opcion incorrecta, intente nuevamente."<<endl; // Se crea este estatuto para evitar que se ingrese un número diferente a los pedidos.
+                 cout<<"Opcion incorrecta, intente nuevamente."<<endl; // Se crea este estatuto para evitar que se ingrese un nÃºmero diferente a los pedidos.
                     break;
                 }
               else{
               if(opcionpro=1){
-                    cout<<user.mostrarPaqueteT(); // Se utiliza la función anteriormente definida en la clase Usuario para mostrar los paquetes de Telcel.
+                    cout<<user.mostrarPaqueteT(); // Se utiliza la funciÃ³n anteriormente definida en la clase Usuario para mostrar los paquetes de Telcel.
                     cout<<"\nElija uno de los paquetes antes mostrados: ";
                     cin>>userpaq;
                     user.set_paquete(userpaq); // Se asigna un paquete al objeto con el mismo nombre de la clase usuario.
                     break; // Se usa para salir de estas opciones y que no se pasa al segundo estatuto.
               }
                 if(opcionpro=2){
-                        cout<<user.mostrarPaqueteM(); // Se utiliza la función anteriormente definida en la clase Usuario para mostrar los paquetes de Movistar.
+                        cout<<user.mostrarPaqueteM(); // Se utiliza la funciÃ³n anteriormente definida en la clase Usuario para mostrar los paquetes de Movistar.
                         cout<<"\nElija uno de los paquetes antes mostrados: ";
                         cin>>userpaq;
                         user.set_paquete(userpaq); // Se asigna un paquete al objeto con el mismo nombre de la clase usuario.
@@ -111,16 +111,30 @@ int main (){
             break;
 
           case 4:
-            fmpg(); // Se manda a llamar al pequeño menú anteriormente creado.
+            fmpg(); // Se manda a llamar al pequeÃ±o menÃº anteriormente creado.
             cout<<"Elija una de las opciones: ";
+
             cin>>userpag;
-            user.set_pago(userpag); // Se asigna un tipo de pago al objeto con el mismo nombre de la clase usuario.
+
+            if(userpag>2){
+                cout<<"Opcion incorrecta, intente nuevamente."<<endl; // Se crea este estatuto para evitar que se ingrese un nÃºmero diferente a los pedidos.
+                    break;
+            }
+            else{
+                if(userpag=1){
+                   user.set_pago(userpag); // Se asigna un tipo de pago al objeto con el mismo nombre de la clase usuario.
             break;
+                }
+                if(userpag=2){
+                   user.set_pago(userpag); // Se asigna un tipo de pago al objeto con el mismo nombre de la clase usuario.
+            break;
+            }
+
 
           case 5:
-            usernum=4489999999+rand()%4499999999; // Se crea un número aleatorio entre esas dos cantidades y se guarda en una variable.
+            usernum=4489999999+rand()%4499999999; // Se crea un nÃºmero aleatorio entre esas dos cantidades y se guarda en una variable.
             cout<<"Este es su n\xA3mero:\n"<<usernum;
-            user.set_numero(usernum); // Se asigna un número de teléfono al objeto con el mismo nombre de la clase usuario.
+            user.set_numero(usernum); // Se asigna un nÃºmero de telÃ©fono al objeto con el mismo nombre de la clase usuario.
             break;
 
           case 6:
@@ -131,4 +145,5 @@ int main (){
           }
           }
 
+}
 }
